@@ -169,3 +169,42 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Tableau des matchs */
+
+.tableau-conteneur {
+    max-width: 900px;
+    margin: auto;
+    overflow-x: auto;
+}
+
+.matchs-tableau {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.matchs-tableau th {
+    background-color: #db1738;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.matchs-tableau td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.victoire {
+    color: #1b9e3e;
+    font-weight: bold;
+}
+
+.defaite {
+    color: #db1738;
+    font-weight: bold;
+}
