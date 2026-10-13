@@ -75,3 +75,21 @@
     padding: 4px 14px;
     border-radius: 20px;
 }
+/* Grille : 3 colonnes → 2 → 1 */
+.equipes-grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+@media (max-width: 1100px) {
+    .equipes-grille {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .equipes-grille {
+        grid-template-columns: 1fr;
+    }
+}
