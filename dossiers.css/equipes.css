@@ -1,0 +1,39 @@
+/* ===== PAGE ÉQUIPES ===== */
+
+/* Lien actif dans le menu */
+.menu a.actif {
+    color: #ff304f;
+    font-weight: bold;
+}
+/* Boutons de catégories */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.categorie {
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    border: 2px solid #db1738;
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+.categorie:hover {
+    background-color: #db1738;
+}
+
+/* Style commun des sections */
+.equipe-section {
+    margin-bottom: 70px;
+}
+
+.equipe-section h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
