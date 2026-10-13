@@ -5,7 +5,9 @@
     color: #ff304f;
     font-weight: bold;
 }
+
 /* Boutons de catégories */
+
 .categories {
     display: flex;
     flex-wrap: wrap;
@@ -37,7 +39,9 @@
     text-align: center;
     margin-bottom: 30px;
 }
+
 /* Cartes d'équipe */
+
 .equipe-carte {
     background-color: white;
     color: black;
@@ -75,7 +79,9 @@
     padding: 4px 14px;
     border-radius: 20px;
 }
+
 /* Grille : 3 colonnes → 2 → 1 */
+
 .equipes-grille {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -92,4 +98,40 @@
     .equipes-grille {
         grid-template-columns: 1fr;
     }
+}
+
+/* Joueurs et staff (cartes sombres) */
+
+.membres-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.membre-carte {
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 15px;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.membre-badge {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    background-color: #db1738;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.membre-carte h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.membre-carte p {
+    color: #ddd;
+    font-size: 14px;
 }
