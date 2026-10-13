@@ -135,3 +135,37 @@
     color: #ddd;
     font-size: 14px;
 }
+
+/* Statistiques */
+
+.stats-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-bloc {
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 30px 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.stat-chiffre {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    color: #db1738;
+}
+
+.stat-texte {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .stats-grille {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
