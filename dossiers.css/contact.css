@@ -82,3 +82,19 @@
     line-height: 1.7;
     margin-bottom: 8px;
 }
+/*horaire d'accueil*/
+.horaires {
+    list-style: none;
+}
+
+.horaires li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: #ddd;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.horaires li:last-child {
+    border-bottom: none;
+}
