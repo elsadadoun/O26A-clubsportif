@@ -34,6 +34,35 @@
 
             <section class="contact">
                 <h2>ENVOYEZ-NOUS UN MESSAGE</h2>
+                <!--  Formulaire de contact   -->
+                <div class="carte">
+                    <form class="formulaire" action="#" method="post">
+
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" required>
+
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" required>
+
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="sujet">Sujet</label>
+                        <select id="sujet" name="sujet">
+                            <option>Inscription</option>
+                            <option>Séance d'essai</option>
+                            <option>Partenariat</option>
+                            <option>Autre</option>
+                        </select>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+
+                        <button type="submit" class="bouton">Envoyer</button>
+
+                    </form>
+           
+                </div>
             </section>
 
             <footer>
