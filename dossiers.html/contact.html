@@ -1,101 +1,184 @@
-html>
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Basket Club</title>
-    <!-- Lien vers votre fichier CSS commun pour charger les styles -->
-    <link rel="stylesheet" href="css.css">
-    <!-- Lien vers FontAwesome si vous utilisez des icônes (comme le ballon de basket) -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>Basket Club - Contact</title>
+    <link rel="stylesheet" href="../dossiers.css/css.css">
+    <link rel="stylesheet" href="../dossiers.css/contact.css">
 </head>
+
 <body>
 
-    <!-- BARRE LATÉRALE DE NAVIGATION -->
-    <nav class="sidebar">
-        <div class="logo-container">
-            <i class="fa-solid fa-basketball"></i> Basket Club
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="activites.html">Activités</a></li>
-            <li><a href="equipes.html">Équipes</a></li>
-            <li><a href="apropos.html">À propos</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="conteneur">
 
-    <!-- ZONE DE CONTENU DE DROITE -->
-    <main class="main-content">
-        
-        <div class="header-section">
-            <h1>Contactez le Basket Club</h1>
-            <p>Passion • Équipe • Dépassement</p>
-        </div>
+        <aside class="menu">
+            <h2>🏀 BASKET CLUB</h2>
 
-        <!-- CARTE FORMULAIRE STYLE MAQUETTE -->
-        <div class="contact-card">
-            
-            <div class="card-banner">
-                <h2>Une passion qui nous rassemble !</h2>
-            </div>
+            <nav>
+                <a href="page-accueil.html">Accueil</a>
+                <a href="activites.html">Activités</a>
+                <a href="equipes.html">Équipes</a>
+                <a href="apropos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </aside>
 
-            <div class="form-body">
-                <!-- Messages de bienvenue -->
-                <div class="welcome-messages">
-                    <p>🏀 <strong>Futur licencié ?</strong> Parent de joueur ou simple passionné ? Notre équipe vous répond avec le sourire sous 24h !</p>
-                    <p>Enfilez vos baskets et rejoignez l'aventure du Basket Club pour progresser et partager des moments uniques.</p>
+        <main class="contenu">
+            <!--Titre et introduction    -->
+            <header>
+               <h1>Contactez-nous</h1>
+                 <p>Une question ? Envie de rejoindre le club ? Écrivez-nous !</p>
+             </header>
+
+            <section class="contact">
+                <h2>ENVOYEZ-NOUS UN MESSAGE</h2>
+                <!-- coordonnées du club  -->
+                <div class="contact-grille">
+
+                        <!--  Formulaire de contact   -->
+                        <div class="carte">
+                            <form class="formulaire" action="#" method="post">
+
+                                <label for="nom">Nom</label>
+                                <input type="text" id="nom" name="nom" required>
+
+                                <label for="prenom">Prénom</label>
+                                <input type="text" id="prenom" name="prenom" required>
+
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" required>
+
+                                <label for="sujet">Sujet</label>
+                                <select id="sujet" name="sujet">
+                                    <option>Inscription</option>
+                                    <option>Séance d'essai</option>
+                                    <option>Partenariat</option>
+                                    <option>Autre</option>
+                                </select>
+
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+
+                                <button type="submit" class="bouton">Envoyer</button>
+
+                            </form>
+                
+                        </div>
+                        <div class="infos">
+                            <!--ajout des coordonnées du club-->
+                            <div class="info-bloc">
+                                
+                                <h3>📍 Coordonnées</h3>
+                                <p>Gymnase Municipal<br>12 rue du Sport, 75000 Ville</p>
+                                <p>✉️ contact@basketclub.fr</p>
+                                <p>📞 01 23 45 67 89</p>
+                            </div>
+                            <div class="info-bloc">
+                                <!--ajout des horaires d'accueil-->
+                                    <h3>🕒 Horaires d'accueil</h3>
+                                    <ul class="horaires">
+                                        <li><span>Lundi</span><span>17h - 20h</span></li>
+                                        <li><span>Mercredi</span><span>14h - 19h</span></li>
+                                        <li><span>Vendredi</span><span>17h - 20h</span></li>
+                                        <li><span>Samedi</span><span>9h - 12h</span></li>
+                                    </ul>
+                                </div>
+
+                    
+                        </div>
+
                 </div>
+            </section>
+            <!--intégration de la carte du gymnase-->
+            <section class="localisation">
+                <h2>OÙ NOUS TROUVER</h2>
 
-                <form id="contactForm">
-                    <div class="input-group">
-                        <label for="name">Votre Nom & Prénom</label>
-                        <input type="text" id="name" required placeholder="Ex: Lucas Dubois">
-                    </div>
+                <div class="carte">
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=2.29,48.85,2.31,48.87&layer=mapnik"
+                        title="Carte du gymnase"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </section>
+            <section class="reseaux">
+                <!--ajout des liens vers les réseaux-->
+                <h2>SUIVEZ-NOUS</h2>
 
-                    <div class="input-group">
-                        <label for="email">Votre Adresse Email</label>
-                        <input type="email" id="email" required placeholder="Ex: lucas@exemple.com">
-                    </div>
+                <div class="liste-reseaux">
+                    <a href="#" class="bouton">Instagram</a>
+                    <a href="#" class="bouton">Facebook</a>
+                    <a href="#" class="bouton">TikTok</a>
+                    <a href="#" class="bouton">YouTube</a>
+                </div>
+            </section>
+            <!--ajout des contacts responsables-->
+        <section class="responsables">
+            <h2>NOS RESPONSABLES</h2>
 
-                    <div class="input-group">
-                        <label for="subject">Vous souhaitez...</label>
-                        <select id="subject">
-                            <option value="inscription">Inscrire un joueur (Jeune / Senior)</option>
-                            <option value="essai">Demander un entraînement d'essai gratuit</option>
-                            <option value="match">Venir voir un match ou soutenir le club</option>
-                            <option value="autre">Poser une autre question</option>
-                        </select>
-                    </div>
+        <div class="grille-responsables">
 
-                    <div class="input-group">
-                        <label for="message">Votre Message</label>
-                        <textarea id="message" rows="4" required placeholder="Racontez-nous tout..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Envoyer au Secrétariat</button>
-                </form>
-
-                <div id="formResponse" class="hidden"></div>
+        <div class="profil">
+        <div class="avatar">👤</div>
+              <h3>Nom Prénom</h3>
+              <p class="role">Président</p>
+              <p>president@basketclub.fr</p>
             </div>
 
+        <div class="profil">
+        <div class="avatar">🏀</div>
+              <h3>Nom Prénom</h3>
+               <p class="role">Entraîneur</p>
+               <p>coach@basketclub.fr</p>
         </div>
 
-    </main>
+        <div class="profil">    
+        <div class="avatar">📋</div>
+            <h3>Nom Prénom</h3>
+            <p class="role">Secrétaire</p>
+            <p>secretaire@basketclub.fr</p>
+        </div>
 
-    <!-- SCRIPT DE GESTION DU FORMULAIRE -->
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const responseDiv = document.getElementById('formResponse');
-            
-            responseDiv.className = "success-box";
-            responseDiv.innerHTML = Merci ${name} ! Votre message a bien été envoyé.;
-            responseDiv.classList.remove('hidden');
-            
-            document.getElementById('contactForm').reset();
-        });
-    </script>
+        </div>
+        </section>
+              <!--ajout de la Faq-->
+        <section class="faq">
+             <h2>QUESTIONS FRÉQUENTES</h2>
+
+              <div class="faq-liste">
+
+        <details>
+            <summary>Comment s'inscrire au club ?</summary>
+            <p>Remplissez le formulaire ci-dessus en choisissant le sujet « Inscription », ou passez nous voir pendant nos horaires d'accueil.</p>
+        </details>
+
+        <details>
+            <summary>Puis-je faire une séance d'essai ?</summary>
+            <p>Oui, la première séance est offerte. Contactez-nous pour connaître les créneaux disponibles.</p>
+        </details>
+
+        <details>
+            <summary>Quels documents faut-il fournir ?</summary>
+            <p>Un certificat médical, une pièce d'identité et le dossier d'inscription complété.</p>
+        </details>
+
+        <details>
+            <summary>Quelle tenue prévoir ?</summary>
+            <p>Une tenue de sport et des chaussures propres réservées à la salle.</p>
+        </details>
+
+             </div>
+        </section>
+
+            <footer>
+                <p>© 2026 Basket Club - Tous droits réservés</p>
+            </footer>
+
+        </main>
+
+    </div>
+
 </body>
 </html>

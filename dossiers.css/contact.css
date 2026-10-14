@@ -1,0 +1,303 @@
+/*menu fixe au défilement*/
+.menu{
+    position:sticky;
+    top: 0;
+    height:100vh;
+    overflow-y: auto;
+    align-self: flex-start;
+    flex-shrink: 0;
+}
+@media (max-width: 768px){
+    .menu{
+        position: static;
+        height: auto;
+    }
+}
+
+
+/*mise en forme du formulaire dans le style du site" */
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 35px;
+}
+
+.formulaire label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.formulaire input,
+.formulaire select,
+.formulaire textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.formulaire input:focus,
+.formulaire select:focus,
+.formulaire textarea:focus {
+    outline: none;
+    border-color: #db1738;
+}
+
+.formulaire .bouton {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+    margin-top: 10px;
+}
+
+/*coordonnées du club style*/
+.contact-grille {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+.contact-grille .carte {
+    max-width: none;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-bloc {
+    background-color: rgba(0, 0, 0, 0.45);
+    border-left: 4px solid #db1738;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.info-bloc h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.info-bloc p {
+    color: #ddd;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+/*horaire d'accueil*/
+.horaires {
+    list-style: none;
+}
+
+.horaires li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: #ddd;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.horaires li:last-child {
+    border-bottom: none;
+}
+/* intégration style de la carte du gymnase*/
+.localisation {
+    margin-top: 70px;
+}
+
+.localisation h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.localisation iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    display: block;
+}
+/* ajout style des liens vers les réseaux*/
+.reseaux {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.reseaux h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.liste-reseaux {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+/*ajout des contacts responsables*/
+.responsables {
+    margin-top: 70px;
+}
+
+.responsables h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.grille-responsables {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.profil {
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    background-color: #db1738;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.profil h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.profil .role {
+    color: #db1738;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profil p {
+    font-size: 14px;
+}
+/*ajout de la faq*/
+.faq {
+    margin-top: 70px;
+}
+
+.faq h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.faq-liste {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq details {
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 12px;
+    padding: 18px 22px;
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.faq summary:hover {
+    color: #ff304f;
+}
+
+.faq details p {
+    margin-top: 12px;
+    color: #ddd;
+    line-height: 1.7;
+}
+/*Adaptation responsive mobile et tablette*/
+@media (max-width: 768px) {
+
+    .contact-grille {
+        grid-template-columns: 1fr;
+    }
+
+    .formulaire {
+        padding: 25px 20px;
+    }
+
+    .contact h2,
+    .localisation h2,
+    .reseaux h2,
+    .responsables h2,
+    .faq h2 {
+        font-size: 23px;
+    }
+
+    .localisation,
+    .reseaux,
+    .responsables,
+    .faq {
+        margin-top: 50px;
+    }
+
+    .localisation iframe {
+        height: 250px;
+    }
+}
+/*ajout de la partie finition style*/
+html {
+    scroll-behavior: smooth;
+}
+
+.profil,
+.info-bloc,
+.faq details {
+    transition: transform 0.2s ease;
+}
+
+.profil:hover,
+.info-bloc:hover {
+    transform: translateY(-4px);
+}
+
+.bouton {
+    transition: background-color 0.2s ease;
+}
+
+.formulaire input::placeholder,
+.formulaire textarea::placeholder {
+    color: #999;
+}
