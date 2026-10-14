@@ -1,0 +1,288 @@
+/* ===== PAGE ÉQUIPES ===== */
+
+/* Lien actif dans le menu */
+.menu a.actif {
+    color: #ff304f;
+    font-weight: bold;
+}
+
+/* Menu fixe au défilement */
+.menu {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    align-self: flex-start;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        position: static;
+        height: auto;
+    }
+}
+
+/* Boutons de catégories */
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.categorie {
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    border: 2px solid #db1738;
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+.categorie:hover {
+    background-color: #db1738;
+}
+
+/* Style commun des sections */
+.equipe-section {
+    margin-bottom: 70px;
+}
+
+.equipe-section h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Cartes d'équipe */
+
+.equipe-carte {
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.equipe-carte img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.equipe-infos {
+    padding: 20px;
+}
+
+.equipe-infos h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.equipe-infos p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.equipe-tag {
+    display: inline-block;
+    background-color: #db1738;
+    color: white;
+    font-size: 13px;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+/* Grille : 3 colonnes → 2 → 1 */
+
+.equipes-grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+@media (max-width: 1100px) {
+    .equipes-grille {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .equipes-grille {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Joueurs et staff (cartes sombres) */
+
+.membres-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.membre-carte {
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 15px;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.membre-badge {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    background-color: #db1738;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.membre-carte h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.membre-carte p {
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* Statistiques */
+
+.stats-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-bloc {
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 30px 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.stat-chiffre {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    color: #db1738;
+}
+
+.stat-texte {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .stats-grille {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tableau des matchs */
+
+.tableau-conteneur {
+    max-width: 900px;
+    margin: auto;
+    overflow-x: auto;
+}
+
+.matchs-tableau {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.matchs-tableau th {
+    background-color: #db1738;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.matchs-tableau td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.victoire {
+    color: #1b9e3e;
+    font-weight: bold;
+}
+
+.defaite {
+    color: #db1738;
+    font-weight: bold;
+}
+
+/* Appel à rejoindre le club */
+
+.rejoindre {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 15px;
+    padding: 40px 20px;
+}
+
+.rejoindre h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.rejoindre p {
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+/* Effets au survol */
+
+.equipe-carte,
+.membre-carte,
+.stat-bloc {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equipe-carte:hover,
+.membre-carte:hover,
+.stat-bloc:hover {
+    transform: translateY(-6px);
+}
+
+.equipe-carte img {
+    transition: transform 0.4s ease;
+}
+
+.equipe-carte:hover img {
+    transform: scale(1.05);
+}
+
+.equipe-carte {
+    overflow: hidden; /* garde le zoom dans la carte */
+}
+
+/* Ajustements mobile */
+
+@media (max-width: 768px) {
+    .equipe-section {
+        margin-bottom: 50px;
+    }
+
+    .equipe-section h2 {
+        font-size: 23px;
+    }
+
+    .categories {
+        margin-bottom: 35px;
+    }
+}
