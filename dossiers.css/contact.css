@@ -226,3 +226,33 @@
     color: #ddd;
     line-height: 1.7;
 }
+/*Adaptation responsive mobile et tablette*/
+@media (max-width: 768px) {
+
+    .contact-grille {
+        grid-template-columns: 1fr;
+    }
+
+    .formulaire {
+        padding: 25px 20px;
+    }
+
+    .contact h2,
+    .localisation h2,
+    .reseaux h2,
+    .responsables h2,
+    .faq h2 {
+        font-size: 23px;
+    }
+
+    .localisation,
+    .reseaux,
+    .responsables,
+    .faq {
+        margin-top: 50px;
+    }
+
+    .localisation iframe {
+        height: 250px;
+    }
+}
