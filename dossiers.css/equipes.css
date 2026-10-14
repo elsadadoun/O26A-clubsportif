@@ -6,6 +6,23 @@
     font-weight: bold;
 }
 
+/* Menu fixe au défilement */
+.menu {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    align-self: flex-start;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        position: static;
+        height: auto;
+    }
+}
+
 /* Boutons de catégories */
 
 .categories {
