@@ -4,7 +4,7 @@ Site vitrine d'un club de basket pour présenter les activités, les équipes, l
 
 #MEMBRE DU GROUPE
 
-ABOUBAKAR KOULIBALY
+ABOUBAKAR KOULIBALY ;
 OVOUNDARD Nissi Rich
 
 
