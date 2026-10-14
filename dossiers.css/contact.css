@@ -133,3 +133,96 @@
     gap: 20px;
 }
 /*ajout des contacts responsables*/
+.responsables {
+    margin-top: 70px;
+}
+
+.responsables h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.grille-responsables {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.profil {
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    background-color: #db1738;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.profil h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.profil .role {
+    color: #db1738;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profil p {
+    font-size: 14px;
+}
+/*ajout de la faq*/
+.faq {
+    margin-top: 70px;
+}
+
+.faq h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.faq-liste {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq details {
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 12px;
+    padding: 18px 22px;
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.faq summary:hover {
+    color: #ff304f;
+}
+
+.faq details p {
+    margin-top: 12px;
+    color: #ddd;
+    line-height: 1.7;
+}
