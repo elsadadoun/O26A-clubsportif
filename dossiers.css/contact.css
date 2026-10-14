@@ -1,3 +1,20 @@
+/*menu fixe au défilement*/
+.menu{
+    position:sticky;
+    top: 0;
+    height:100vh;
+    overflow-y: auto;
+    align-self: flex-start;
+    flex-shrink: 0;
+}
+@media (max-width: 768px){
+    .menu{
+        position: static;
+        height: auto;
+    }
+}
+
+
 /*mise en forme du formulaire dans le style du site" */
 
 .contact h2 {
@@ -255,4 +272,28 @@
     .localisation iframe {
         height: 250px;
     }
+}
+/*ajout de la partie finition style*/
+html {
+    scroll-behavior: smooth;
+}
+
+.profil,
+.info-bloc,
+.faq details {
+    transition: transform 0.2s ease;
+}
+
+.profil:hover,
+.info-bloc:hover {
+    transform: translateY(-4px);
+}
+
+.bouton {
+    transition: background-color 0.2s ease;
+}
+
+.formulaire input::placeholder,
+.formulaire textarea::placeholder {
+    color: #999;
 }
