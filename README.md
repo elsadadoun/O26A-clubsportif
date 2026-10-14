@@ -2,6 +2,12 @@
 
 Site vitrine d'un club de basket pour présenter les activités, les équipes, les valeurs du club et les informations de contact.
 
+#MEMBRE DU GROUPE
+
+ABOUBAKAR KOULIBALY
+OVOUNDARD Nissi Rich
+
+
 ## Aperçu du projet
 
 Ce projet est une landing page statique développée en HTML et CSS. Il permet de :
