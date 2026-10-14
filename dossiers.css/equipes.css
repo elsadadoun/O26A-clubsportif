@@ -208,3 +208,64 @@
     color: #db1738;
     font-weight: bold;
 }
+
+/* Appel à rejoindre le club */
+
+.rejoindre {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 15px;
+    padding: 40px 20px;
+}
+
+.rejoindre h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.rejoindre p {
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+/* Effets au survol */
+
+.equipe-carte,
+.membre-carte,
+.stat-bloc {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equipe-carte:hover,
+.membre-carte:hover,
+.stat-bloc:hover {
+    transform: translateY(-6px);
+}
+
+.equipe-carte img {
+    transition: transform 0.4s ease;
+}
+
+.equipe-carte:hover img {
+    transform: scale(1.05);
+}
+
+.equipe-carte {
+    overflow: hidden; /* garde le zoom dans la carte */
+}
+
+/* Ajustements mobile */
+
+@media (max-width: 768px) {
+    .equipe-section {
+        margin-bottom: 50px;
+    }
+
+    .equipe-section h2 {
+        font-size: 23px;
+    }
+
+    .categories {
+        margin-bottom: 35px;
+    }
+}
