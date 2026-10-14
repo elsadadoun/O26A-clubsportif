@@ -1,11 +1,8 @@
 /*menu fixe au défilement*/
 .menu{
-    position:sticky;
-    top: 0;
-    height:100vh;
-    overflow-y: auto;
-    align-self: flex-start;
-    flex-shrink: 0;
+   width: 260px;
+   background-color: rgba(10,30,90,0.6);
+   padding: 40px 25px;
 }
 @media (max-width: 768px){
     .menu{
@@ -300,4 +297,111 @@ html {
 .formulaire input::placeholder,
 .formulaire textarea::placeholder {
     color: #999;
+}
+
+/* ...existing code... */
+
+/* Apparition progressive du contenu */
+@keyframes contact-entree {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenu > header,
+.contenu > section {
+    animation: contact-entree 700ms cubic-bezier(.2, .75, .25, 1) both;
+}
+
+.contenu > section:nth-of-type(1) { animation-delay: 100ms; }
+.contenu > section:nth-of-type(2) { animation-delay: 180ms; }
+.contenu > section:nth-of-type(3) { animation-delay: 260ms; }
+.contenu > section:nth-of-type(4) { animation-delay: 340ms; }
+.contenu > section:nth-of-type(5) { animation-delay: 420ms; }
+
+/* Cartes et profils */
+.contact-grille > .carte,
+.info-bloc,
+.profil {
+    transition: transform 280ms cubic-bezier(.2, .75, .25, 1),
+                box-shadow 280ms ease;
+}
+
+.contact-grille > .carte:hover,
+.info-bloc:hover,
+.profil:hover {
+    transform: translateY(-5px);
+}
+
+/* Champs du formulaire */
+.formulaire input,
+.formulaire select,
+.formulaire textarea {
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.formulaire input:focus,
+.formulaire select:focus,
+.formulaire textarea:focus {
+    transform: translateY(-2px);
+}
+
+/* Boutons et réseaux */
+.bouton {
+    transition: transform 220ms ease, filter 220ms ease;
+}
+
+.bouton:hover {
+    transform: translateY(-3px);
+}
+
+.bouton:active {
+    transform: scale(.98);
+}
+
+/* Carte interactive */
+.localisation .carte {
+    overflow: hidden;
+}
+
+.localisation iframe {
+    display: block;
+    transition: transform 400ms ease;
+}
+
+.localisation .carte:hover iframe {
+    transform: scale(1.02);
+}
+
+/* FAQ */
+.faq details {
+    transition: transform 220ms ease;
+}
+
+.faq details[open] {
+    transform: translateX(4px);
+}
+
+/* Accessibilité clavier et réduction des animations */
+.formulaire :focus-visible,
+.bouton:focus-visible,
+.faq summary:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
 }
