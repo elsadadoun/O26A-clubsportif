@@ -1,0 +1,45 @@
+/*mise en forme du formulaire dans le style du site" */
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 35px;
+}
+
+.formulaire label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.formulaire input,
+.formulaire select,
+.formulaire textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.formulaire input:focus,
+.formulaire select:focus,
+.formulaire textarea:focus {
+    outline: none;
+    border-color: #db1738;
+}
+
+.formulaire .bouton {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+    margin-top: 10px;
+}
