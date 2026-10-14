@@ -98,3 +98,20 @@
 .horaires li:last-child {
     border-bottom: none;
 }
+/* intégration style de la carte du gymnase*/
+.localisation {
+    margin-top: 70px;
+}
+
+.localisation h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.localisation iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    display: block;
+}
